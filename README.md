@@ -4,9 +4,11 @@
 
 ## 指定interpreter
 在首行加入：
+```html
 <div class = "alert alert-block alert-success">
 \#!/bin/bash
 </div>
+```
 
 
 ## 使脚本具有执行权限
