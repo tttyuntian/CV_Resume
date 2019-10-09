@@ -5,34 +5,26 @@
 ## 指定interpreter
 在首行加入：
 ```html
-<div class = "alert alert-block alert-success">
 \#!/bin/bash
-</div>
 ```
 
 ## 使脚本具有执行权限
 ```html
-<div class = "alert alert-block alert-success">
 chmod +x ./temp.sh
-</div>
 ```
 
 ## 执行脚本
 ```html
-<div class = "alert alert-block alert-success">
 ./temp.sh
-</div>
 ```
 
 ## 变量
 
 ### 定义变量 & 使用变量
 ```html
-<div class = "alert alert-block alert-success">
 read INPUTVALUE
 
 echo "Hello, \${INPUTVALUE}"
-</div>
 ```
 
 ### 重新定义变量
@@ -40,21 +32,17 @@ echo "Hello, \${INPUTVALUE}"
 
 注意：readonly后变量改为只读变量
 ```html
-<div class = "alert alert-block alert-success">
 INPUTVALUE="simonyun"
 
 readonly INPUTVALUE
 
 INPUTVALUE='oopsi'
-</div>
 ```
 
 ### 删除变量
 注意：unset命令不能删除只读变量
 ```html
-<div class = "alert alert-block alert-success">
 unset variable_name
-</div>
 ```
 
 ### 变量类型
@@ -93,9 +81,7 @@ echo后使用的指令
 ### 命令替换
 使用反引号
 ```html
-<div class = "alert alert-block alert-success">
 DATE=`date`
-</div>
 ```
 
 ### 变量替换
@@ -106,9 +92,7 @@ DATE=`date`
 
 注意：乘号（*）前必须加反斜杠（\）转义
 ```html
-<div class = "alert alert-block alert-success">
 val=`expr 2 + 2`
-</div>
 ```
 
 ### logical operator
@@ -139,34 +123,26 @@ val=`expr 2 + 2`
 
 ### 字符串拼接
 ```html
-<div class = "alert alert-block alert-success">
 your_name="simonyun"
 
 greeting="hello, "\$your_name" !"
 
 greeting_1="hello, \${your_name} !"
-</div>
 ```
 
 ### 字符串长度
 ```html
-<div class = "alert alert-block alert-success">
 echo \${#string}
-</div>
 ```
 
 ### 提取substring
 ```html
-<div class = "alert alert-block alert-success">
 echo \${string:1:4}
-</div>
 ```
 
 ### 查找substring
 ```html
-<div class = "alert alert-block alert-success">
 echo `expr index "\$string" is`
-</div>
 ```
 
 
@@ -174,9 +150,7 @@ echo `expr index "\$string" is`
 
 ### array 定义
 ```html
-<div class = "alert alert-block alert-success">
 array_name=(value0 value1 value2 value3)
-</div>
 ```
 
 注意：elements要用空格分开，也可以换行
@@ -184,17 +158,13 @@ array_name=(value0 value1 value2 value3)
 
 ### array 提取
 ```html
-<div class = "alert alert-block alert-success">
 \${array_name[index]}
-</div>
 ```
 注意：\${array_name[*]} 可以获取所有元素。也可以用@！
     
 ### array 长度
 ```html
-<div class = "alert alert-block alert-success">
 \${#array_name[@]}
-</div>
 ```
 
 
@@ -202,26 +172,20 @@ array_name=(value0 value1 value2 value3)
 
 如果变量与其他字符相连的话，需要使用大括号{}。
 ```html
-<div class = "alert alert-block alert-success">
 month=11
 
 echo "\${month}-23-1996"
-</div>
 ```
 
 使用\c可以取消换行。
 ```html
-<div class = "alert alert-block alert-success">
 echo "Hello, \c"
 echo "World!"
-</div>
 ```
 
 将结果定向至文件
 ```html
-<div class = "alert alert-block alert-success">
 echo "Hello, simonyun!" > myfile
-</div>
 ```
 
 注意：如果想原样输出字符串，使用单引号！
@@ -291,26 +255,20 @@ unset .f function_name
 
 ### 输出重定向
 ```html
-<div class = "alert alert-block alert-success">
 command > file
-</div>
 ```
 
 如果使用>>则追加到文件末尾：
 ```html
-<div class = "alert alert-block alert-success">
 command >> file
-</div>
 ```
 
 ### 输入重定向
 注意：第一个会输出文件名users，第二个不会
 ```html
-<div class = "alert alert-block alert-success">
 wc -l users
     
 wc -l < users
-</div>
 ```
 
 <img src = "pictures/git_hooks/shell_redirection.png">
@@ -328,18 +286,14 @@ delimiter
 ### /dev/null
 不希望在屏幕上显示输出结果时，将输出重定向到/dev/null！
 ```html
-<div class = "alert alert-block alert-success">
 command > /dev/null
-</div>
 ```
 
 ## Shell文件包含
 ```html
-<div class = "alert alert-block alert-success">
 . filename
 
 source filename
-</div>
 ```
 
 ## 相关网站
